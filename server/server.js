@@ -49,6 +49,8 @@ app.post('/revTranscribed', function(req, res) {
   res.send('200');
 });
 
+app.get('/yoyo', (req, res) => res.send('Hello YoYoDude'));
+
 app.get('/', (req, res) => res.send('Hello World'));
 app.use('/api', voice);
 
