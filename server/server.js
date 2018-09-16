@@ -1,7 +1,7 @@
 const express = require('express');
 const voice = require('./routes/voice.route');
-// var fs = require("fs");
-// var request = require("request");
+var fs = require("fs");
+var request = require("request");
 
 const app = express();
 
