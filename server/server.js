@@ -1,10 +1,13 @@
-const express = require('express');
-const voice = require('./routes/voice.route');
+var http = require('http');
 
-const app = express();
+var server = http.createServer(function(request, response) {
 
-app.get('/', (req, res) => res.send('Hello World'));
-app.use('/api', voice);
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.end("Hello THERE!");
 
-let port = 1234;
-app.listen(port, () => console.log('Server is on ' + port));
+});
+
+var port = process.env.PORT || 1337;
+server.listen(port);
+
+console.log("Server running at http://localhost:%d", port);
