@@ -4,5 +4,5 @@ const app = express();
 
 app.get('/', (req, res) => res.send('Hello THERE!!!!!!'));
 
-let port = 1234;
+var port = process.env.PORT || 1337;
 app.listen(port, () => console.log('Server is on' + port));
