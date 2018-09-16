@@ -7,6 +7,7 @@ const app = express();
 
 app.get('/revSpeech', function (req, res) {
   console.log("WORKED! FAM LOL");
+  alert("FUCK KEN LOL");
   var options = {
     method: 'POST',
     url: 'https://api.rev.ai/revspeech/v1beta/jobs',
