@@ -15,11 +15,9 @@ app.get('/revSpeech', function (req, res) {
        authorization: 'Bearer 01imrH9aRwY_I8TqTzSJOjQHA4MqwsD4LrgzZK_b3USSMrhT3lumzv60Gfwp6niXZNbvDomlg0P064zLDgVO8jq-vwtK4',
        'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
      },
-    formData: {
-       media_url: "http://cdn.mos.musicradar.com/audio/samples/female-vocals-demo-loops/do%20you%20feel%20the%20same%20mid.mp3",
-       metadata: "Sample META Text",
-       callback_url: "textspeech-apis.azurewebsites.net/revTranscribed"
-      }
+     media_url: "http://cdn.mos.musicradar.com/audio/samples/female-vocals-demo-loops/do%20you%20feel%20the%20same%20mid.mp3",
+     metadata: "Sample META Text",
+     callback_url: "textspeech-apis.azurewebsites.net/revTranscribed"
     };
     console.log("WORKED! FAM LOL2");
   request(options, function (error, response, body) {
