@@ -22,13 +22,14 @@ app.get('/revSpeech', function (req, res) {
     console.log("WORKED! FAM LOL2");
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
-    console.log(body);
+    console.log("lol",response, "OO::OOO",body);
   });
   console.log("WORKED! FAM LOL3");
   res.send('POST request to the homepage SUCCESS');
 });
 
 app.post('/revTranscribed', function(req, res) {
+  console.log("STARTED");
   console.log(req);
   console.log(req.job);
   console.log("WORKED! FAM LOL34444444444555");
