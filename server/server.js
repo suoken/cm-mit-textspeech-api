@@ -5,7 +5,7 @@ var request = require("request");
 
 const app = express();
 
-app.post('/revSpeech', function (req, res) {
+app.get('/revSpeech', function (req, res) {
   var options = {
     method: 'POST',
     url: 'https://api.rev.ai/revspeech/v1beta/jobs',
