@@ -21,17 +21,19 @@ app.get('/revSpeech', function (req, res) {
        callback_url: "textspeech-apis.azurewebsites.net/revTranscribed"
       }
     };
-
+    console.log("WORKED! FAM LOL2");
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
     console.log(body);
   });
+  console.log("WORKED! FAM LOL3");
   res.send('POST request to the homepage SUCCESS');
 });
 
 app.post('/revTranscribed', function(req, res) {
   console.log(req);
   console.log(req.job);
+  console.log("WORKED! FAM LOL34444444444555");
   let url = 'https://api.rev.ai/revspeech/v1beta/jobs/' + req.job.id;
   var options = {
     method: 'GET',
@@ -47,6 +49,7 @@ app.post('/revTranscribed', function(req, res) {
     if (error) throw new Error(error);
     console.log(body);
   });
+  console.log("WORKED! FAM LOL7777");
   res.send('200');
 });
 
